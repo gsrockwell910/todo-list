@@ -1,0 +1,1 @@
+This will be a to-do list app that follows CRUD - create, read, update, and delete. This will be made using HTML, CSS, and JavaScript, and this project is just for fun.
