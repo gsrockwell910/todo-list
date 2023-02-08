@@ -1,0 +1,46 @@
+/* CSS RESET */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/* CSS RESET */
+
+/* Start input and button styling */
+.task-input-field {
+    display: flex;
+    margin-right: 4px;
+ 
+ }
+ 
+ .input-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ /* End input and button styling */
+
+/* Start main section styling */
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.todo-list {
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-title {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: -0px;
+    border-bottom: 1px solid black;
+    background-color: yellow;
+}
+/* End main section styling */
