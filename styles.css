@@ -4,6 +4,11 @@
 }
 /* CSS RESET */
 
+body {
+    background-color: black;
+    color: white;
+}
+
 /* Start input and button styling */
 .task-input-field {
     display: flex;
@@ -29,7 +34,9 @@
 .todo-list {
     border: 1px solid black;
     width: 500px;
+    max-height: 500px;
     height: 500px;
+    overflow: auto;
     display: flex;
     flex-direction: column;
 }
@@ -41,6 +48,37 @@
     padding-bottom: 20px;
     margin-top: -0px;
     border-bottom: 1px solid black;
-    background-color: yellow;
+    background-color: powderblue;
 }
+
 /* End main section styling */
+
+/* Start priority toggle */
+.red {
+    background-color: red;
+ }
+
+ .yellow {
+    background-color: yellow;
+ }
+
+ .green {
+    background-color: green;
+ }
+
+ #status-indicator {
+    margin-left: 10px;
+    padding: 2px 10px 2px 10px;
+    border-radius: 5%;
+  }
+ /* End priority toggle */
+
+ /* Start list item styling */
+ .list-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    /* border: 1px solid white; */
+    width: 400px;
+ }
+ /* End list item styling */
