@@ -3,6 +3,11 @@ let myUl = document.getElementById("todo-ul");
 let inputField = document.getElementById("task-input");
 
 plusButton.addEventListener("click", handleItem);
+document.addEventListener("keypress", function enterPress(e) {
+    if (e.which === 13) {
+        handleItem();
+    }
+})
 
 function handleItem() {
     let liElement = document.createElement("li");
@@ -32,5 +37,5 @@ function handleItem() {
             priorityStatus.className = "red";
         };
     });
-
+    
 };
