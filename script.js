@@ -13,26 +13,41 @@ function handleItem() {
     let liElement = document.createElement("li");
     let priorityStatus = document.createElement("span");
     let deleteButton = document.createElement("button");
+    let checkContainer = document.createElement("span");
+    let checkBox = document.createElement("input");
    
-    liElement.className = "list-item"
+    liElement.className = "list-item";
     liElement.textContent = inputField.value;
 
     priorityStatus.className = "red";
     priorityStatus.id = "status-indicator";
 
     deleteButton.className = "delete";
-    deleteButton.id = "delete-list-items"
-    deleteButton.textContent = "X"
+    deleteButton.id = "delete-list-items";
+    deleteButton.textContent = "X";
 
-   myUl.appendChild(liElement);
-   liElement.appendChild(priorityStatus);
-   liElement.appendChild(deleteButton)
+    checkBox.setAttribute("type", "checkbox");
+    checkBox.id = "mark-task-complete";
 
+    checkContainer.className = "check-box-container";
+
+  if  (inputField.value == "") {
+    alert("The input field appears to be empty!");
+  } else {
+    myUl.appendChild(checkContainer);
+    checkContainer.appendChild(checkBox);
+    myUl.appendChild(liElement);
+    liElement.appendChild(priorityStatus);
+    liElement.appendChild(deleteButton);
+  };
+  
     inputField.value = "";
 
     deleteButton.addEventListener("click", function() {
         myUl.removeChild(liElement);
+        myUl.removeChild(checkContainer);
         liElement.removeChild(priorityStatus);
+        checkContainer.removeChild(checkBox);
     });
 
     priorityStatus.addEventListener("click", function() {
