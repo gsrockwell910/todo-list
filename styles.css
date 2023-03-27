@@ -126,3 +126,7 @@ body {
    border-radius: 5%;
  }
  /* End list item styling */
+#mark-task-complete {
+   float: left;
+   margin-right: 10px;
+} 
