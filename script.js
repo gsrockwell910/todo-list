@@ -12,6 +12,7 @@ document.addEventListener("keypress", function enterPress(e) {
 function handleItem() {
     let liElement = document.createElement("li");
     let priorityStatus = document.createElement("span");
+    let deleteButton = document.createElement("button");
    
     liElement.className = "list-item"
     liElement.textContent = inputField.value;
@@ -19,13 +20,19 @@ function handleItem() {
     priorityStatus.className = "red";
     priorityStatus.id = "status-indicator";
 
+    deleteButton.className = "delete";
+    deleteButton.id = "delete-list-items"
+    deleteButton.textContent = "X"
+
    myUl.appendChild(liElement);
    liElement.appendChild(priorityStatus);
+   liElement.appendChild(deleteButton)
 
     inputField.value = "";
-    liElement.addEventListener("dblclick", function () {
+
+    deleteButton.addEventListener("click", function() {
         myUl.removeChild(liElement);
-        myUl.removeChild(priorityStatus);
+        liElement.removeChild(priorityStatus);
     });
 
     priorityStatus.addEventListener("click", function() {
