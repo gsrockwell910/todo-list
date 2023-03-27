@@ -13,12 +13,22 @@ body {
 .task-input-field {
     display: flex;
     margin-right: 4px;
+    border: none;
+    border: 2px solid powderblue;
+    background-color: black;
+    color: white;
  }
 
  .input-container {
      display: flex;
      justify-content: center;
      align-items: center;
+ }
+
+ .append-task {
+    background-color: powderblue;
+    color: white;
+    border: 2px solid powderblue;
  }
  /* End input and button styling */
 
