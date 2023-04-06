@@ -15,9 +15,17 @@ function handleItem() {
     let deleteButton = document.createElement("button");
     let checkContainer = document.createElement("span");
     let checkBox = document.createElement("input");
+    let deleteButtonSpan = document.createElement("span");
    
     liElement.className = "list-item";
     liElement.textContent = inputField.value;
+    liElement.addEventListener("click", function() {
+        if (liElement.className == "list-item" ) {
+        liElement.classList.add("struck-through");
+        } else {
+        liElement.classList.remove("struck-through");
+        }
+    });
 
     priorityStatus.className = "red";
     priorityStatus.id = "status-indicator";
@@ -38,7 +46,9 @@ function handleItem() {
     checkContainer.appendChild(checkBox);
     myUl.appendChild(liElement);
     liElement.appendChild(priorityStatus);
-    liElement.appendChild(deleteButton);
+    // liElement.appendChild(deleteButton);
+    liElement.appendChild(deleteButtonSpan);
+    deleteButtonSpan.appendChild(deleteButton);
   };
   
     inputField.value = "";
