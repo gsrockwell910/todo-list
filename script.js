@@ -19,13 +19,6 @@ function handleItem() {
    
     liElement.className = "list-item";
     liElement.textContent = inputField.value;
-    liElement.addEventListener("click", function() {
-        if (liElement.className == "list-item" ) {
-        liElement.classList.add("struck-through");
-        } else {
-        liElement.classList.remove("struck-through");
-        }
-    });
 
     priorityStatus.className = "red";
     priorityStatus.id = "status-indicator";
@@ -38,6 +31,13 @@ function handleItem() {
     checkBox.id = "mark-task-complete";
 
     checkContainer.className = "check-box-container";
+    checkContainer.addEventListener("click", function() {
+        if (liElement.className == "list-item" ) {
+            liElement.classList.add("struck-through");
+        } else {
+            liElement.classList.remove("struck-through");
+        }
+    });
 
   if  (inputField.value == "") {
     alert("The input field appears to be empty!");
